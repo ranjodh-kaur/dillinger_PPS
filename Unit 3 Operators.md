@@ -1,8 +1,6 @@
 
 # Unit-3 Operators
 _______
-
-
 | Topics | Detail |
 | --- | --- |
 | Different types of Operators: | Assignment Operators, Numeric operators, Prefix and postfix operators, Binary number system, Bitwise operators, Logical operators, Relational operators, Short-circuit operators, sizeof operator |
@@ -41,9 +39,9 @@ _______
 
 ### 2. Numeric Operators / Arithmetic Operators
 
-Description: Used for mathematical calculations.<br>
+**Description:** Used for mathematical calculations.
 **Arithmetic operators** are like basic calculators that add, subtract, multiply, or divide.
-* x + y adds two numbers, x - y subtracts, x * y multiplies, and x / y divides.
+- x + y adds two numbers, x - y subtracts, x * y multiplies, and x / y divides.
 
 **Examples:** + (addition), - (subtraction), * (multiplication), / (division), % (modulus)
 
