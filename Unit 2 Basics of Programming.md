@@ -75,13 +75,12 @@ End
 
 **1. Basic Structure of a C++ Program**
 
-```
-<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string"><iostream></span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-comment">// Code to be executed</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+```c
+#include <iostream>
+using namespace std;
+int main() {
+// Code to be executed
+return 0;
 }
 ```
 
@@ -181,8 +180,8 @@ The program will be executed and the output will be shown in the terminal.
 * **Definition**: Named storage locations in memory that can hold data.
 * **Syntax**:
 
-```
-<span class="hljs-keyword">int</span> a = <span class="hljs-number">5</span>;
+```c
+int a = 5;
 ```
 
 **4. Constants**
@@ -190,8 +189,8 @@ The program will be executed and the output will be shown in the terminal.
 * **Definition**: Variables whose values cannot be changed during program execution.
 * **Syntax**:
 
-```
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> PI = <span class="hljs-number">3</span>;
+```c
+const int PI = 3;
 ```
 
 **5. Data Types**:
@@ -262,26 +261,23 @@ C++ provides several basic (or fundamental) data types that allow you to define 
 
 ### Example Code Using Basic Data Types:
 
-```
-<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string"><iostream></span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;                <span class="hljs-comment">// Integer</span>
-    <span class="hljs-keyword">float</span> b = <span class="hljs-number">3.14f</span>;           <span class="hljs-comment">// Floating-point</span>
-    <span class="hljs-keyword">double</span> c = <span class="hljs-number">3.1415926535</span>;   <span class="hljs-comment">// Double precision floating-point</span>
-    <span class="hljs-keyword">char</span> d = <span class="hljs-string">'A'</span>;              <span class="hljs-comment">// Character</span>
-    <span class="hljs-keyword">bool</span> e = <span class="hljs-literal">true</span>;             <span class="hljs-comment">// Boolean</span>
-    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> f = <span class="hljs-number">300</span>;      <span class="hljs-comment">// Unsigned integer</span>
-
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Integer a: "</span> << a << endl;
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Float b: "</span> << b << endl;
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Double c: "</span> << c << endl;
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Character d: "</span> << d << endl;
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Boolean e: "</span> << e << endl;
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Unsigned Integer f: "</span> << f << endl;
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+```c
+#include <iostream>
+using namespace std;
+int main() {
+int a = 10; // Integer
+float b = 3.14f; // Floating-point
+double c = 3.1415926535; // Double precision floating-point
+char d = 'A'; // Character
+bool e = true; // Boolean
+unsigned int f = 300; // Unsigned integer
+cout << "Integer a: " << a << endl;
+cout << "Float b: " << b << endl;
+cout << "Double c: " << c << endl;
+cout << "Character d: " << d << endl;
+cout << "Boolean e: " << e << endl;
+cout << "Unsigned Integer f: " << f << endl;
+return 0;
 }
 ```
 
@@ -337,29 +333,26 @@ There are mainly five types of errors in programming:
 
 **1. Syntax Errors**: Syntax errors are also known as the compilation errors as they occurred at the compilation time.
 
-* **Definition**: Errors due to incorrect syntax, such as missing semicolons, mismatched parentheses, or misspelled keywords. These errors are mainly occurred due to the mistakes while typing or do not follow the syntax of the specified.<br>
-
-programming language.
+* **Definition**: Errors due to incorrect syntax, such as missing semicolons, mismatched parentheses, or misspelled keywords. These errors are mainly occurred due to the mistakes while typing or do not follow the syntax of the specified programming language.
 * **Example**:
 
-```
-<span class="hljs-number">1.</span>  <span class="hljs-keyword">int</span> a = <span class="hljs-number">5</span>  <span class="hljs-comment">// Missing semicolon causes a syntax error</span>
-```
-
-```
-<span class="hljs-number">2.</span> <span class="hljs-built_in">cout</span><<b; <span class="hljs-comment">// "int b" is missing, variable without declaration</span>
+```c
+1. int a = 5 // Missing semicolon causes a syntax error
 ```
 
-```
-<span class="hljs-number">3.</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
-    </span>{
-        <span class="hljs-built_in">cout</span><<<span class="hljs-string">"Hello"</span>;  <span class="hljs-comment">// missing close curly bracket }</span>
+```c
+2. cout<<b; // "int b" is missing, variable without declaration
 ```
 
+```c
+3. int main()
+{
+cout<<"Hello"; // missing close curly bracket }
 ```
-<span class="hljs-number">4.</span> a=<span class="hljs-number">10</span>;
-   <span class="hljs-built_in">cout</span><<a;   <span class="hljs-comment">// a is undeclared</span>
 
+```c
+4. a=10;
+cout<<a; // a is undeclared
 ```
 
 Commonly occurred syntax errors are:
@@ -371,19 +364,18 @@ Commonly occurred syntax errors are:
 ```
 
 **2. Logical Error**: The logical error is an error that leads to an undesired output. These errors produce the incorrect output, but they are errorfree, known as logical errors.
-
 ```
-          - The occurrence of these errors mainly depends upon the logical thinking of the developer.
-          - If the programmers sound logically good, then there will be fewer chances of these errors.
+- The occurrence of these errors mainly depends upon the logical thinking of the developer.
+- If the programmers sound logically good, then there will be fewer chances of these errors.
 ```
 
 * **Definition**: Errors where the program runs but produces incorrect results due to flawed logic.
 * **Example**:
 
-```
-<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i<=<span class="hljs-number">10</span>; i++); <span class="hljs-comment">// logical error, as we put semicolon after loop</span>
+```c
+for(int i=0; i<=10; i++); // logical error, as we put semicolon after loop
 {
-    <span class="hljs-built_in">cout</span><< i;
+cout<< i;
 }
 ```
 
@@ -392,62 +384,52 @@ Commonly occurred syntax errors are:
 * **Definition**: Errors that occur during the execution of the program, such as dividing by zero or accessing invalid memory.
 * **Example**:
 
-```
-<span class="hljs-keyword">int</span> a= <span class="hljs-number">10</span>;
-<span class="hljs-keyword">int</span> b= a / <span class="hljs-number">0</span>;
-<span class="hljs-built_in">cout</span><< b;
+```c
+int a= 10;
+int b= a / 0;
+cout<< b;
 ```
 
 **4. Linker Error:** These error occurs when after compilation we link the different object files with main's object using Ctrl+F9 key(RUN).<br>
 
 - Linker errors are mainly generated when the executable file of the program is not created. This can be happened either due to the wrong function prototyping or usage of the wrong header file.<br>
-
 - The most common linker error that occurs is that we use Main() instead of main().
-
 * **Example**:
-
-```
-    <span class="hljs-preprocessor">#<span class="hljs-keyword">include</span><span class="hljs-string"><iostream></span></span>
-    <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Main</span><span class="hljs-params">()</span>  <span class="hljs-comment">// undefined reference to main</span>
-    </span>{
-        <span class="hljs-built_in">cout</span><<<span class="hljs-string">"Hello"</span>;
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    }
+```c
+#include<iostream>
+using namespace std;
+int main() // undefined reference to main
+{
+cout<<"Hello";
+return 0;
+}
 ```
 
 **5. Semantic errors:** These errors that occurred when the statements are not understandable by the compiler.
 
 1. **Use of a un-initialized variable.**
+    ```c
+    int i;
+    i=i+2;
+    ```
+2. **Type compatibility**
+    ```c
+    int b = "javatpoint";
+    ```
+3. **Errors in expressions**
+    ```
+     int a, b, c;
+    a + b = c;
+    ```
+4. **Array index out of bound**
 
-```
-  <span class="hljs-keyword">int</span> i;
-  i=i+<span class="hljs-number">2</span>;
-```
-
-1. **Type compatibility**
-
-```
-     <span class="hljs-keyword">int</span> b = <span class="hljs-string">"javatpoint"</span>;
-```
-
-1. **Errors in expressions**
-
-```
-     <span class="hljs-keyword">int</span> a, b, c;
-     a + b = c;
-```
-
-1. **Array index out of bound**
-
-```
-       <span class="hljs-keyword">int</span> a[<span class="hljs-number">10</span>];
-       a[<span class="hljs-number">10</span>] = <span class="hljs-number">34</span>;
-```
+    ```c
+    int a[10];
+    a[10] = 34;
+    ```
 
 * **Example**:
-
-```
-<span class="hljs-keyword">int</span> a= <span class="hljs-number">2</span>, b=<span class="hljs-number">3</span>, c=<span class="hljs-number">1</span>;
-a+b=c; <span class="hljs-comment">// semantic error</span>
-```
+    ```c
+    int a= 2, b=3, c=1;
+    a+b=c; // semantic error
+    ```
