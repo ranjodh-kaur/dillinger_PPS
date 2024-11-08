@@ -372,38 +372,38 @@ Commonly occurred syntax errors are:
 * **Definition**: Errors where the program runs but produces incorrect results due to flawed logic.
 * **Example**:
 
-```c
-for(int i=0; i<=10; i++); // logical error, as we put semicolon after loop
-{
-cout<< i;
-}
-```
+    ```c
+    for(int i=0; i<=10; i++); // logical error, as we put semicolon after loop
+    {
+    cout<< i;
+    }
+    ```
 
 **3. Runtime Error**: Errors which occur during program execution(run-time) after successful compilation are called run-time errors. These errors are very difficult to find, as the compiler does not point to these errors.
 
 * **Definition**: Errors that occur during the execution of the program, such as dividing by zero or accessing invalid memory.
 * **Example**:
 
-```c
-int a= 10;
-int b= a / 0;
-cout<< b;
-```
+    ```c
+    int a= 10;
+    int b= a / 0;
+    cout<< b;
+    ```
 
 **4. Linker Error:** These error occurs when after compilation we link the different object files with main's object using Ctrl+F9 key(RUN).<br>
 
 - Linker errors are mainly generated when the executable file of the program is not created. This can be happened either due to the wrong function prototyping or usage of the wrong header file.<br>
 - The most common linker error that occurs is that we use Main() instead of main().
 * **Example**:
-```c
-#include<iostream>
-using namespace std;
-int main() // undefined reference to main
-{
-cout<<"Hello";
-return 0;
-}
-```
+    ```c
+    #include<iostream>
+    using namespace std;
+    int main() // undefined reference to main
+    {
+    cout<<"Hello";
+    return 0;
+    }
+    ```
 
 **5. Semantic errors:** These errors that occurred when the statements are not understandable by the compiler.
 
@@ -417,8 +417,8 @@ return 0;
     int b = "javatpoint";
     ```
 3. **Errors in expressions**
-    ```
-     int a, b, c;
+    ```c
+    int a, b, c;
     a + b = c;
     ```
 4. **Array index out of bound**
