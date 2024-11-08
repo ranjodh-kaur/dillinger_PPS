@@ -1,6 +1,5 @@
 
 # Unit 4. Control Structures
-
 ***
 
 ### **Conditional Statements**
@@ -9,79 +8,79 @@
   - **Description**: Evaluates a condition. If the condition is true, the block of code within the `if` statement is executed.
   - **Syntax**:
 
-```
-<span class="hljs-keyword">if</span> (condition) {
-    <span class="hljs-comment">// code to be executed if condition is true</span>
+```c
+if (condition) {
+    // code to be executed if condition is true
 }
 ```
   - **Example**:
 
-```
-<span class="hljs-keyword">if</span> (x > <span class="hljs-number">0</span>) {
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"x is positive"</span>;
+```c
+if (x > 0) {
+    cout << "x is positive";
 }
 ```
 2. **`if-else` Statement**:
   - **Description**: Provides an alternative block of code if the condition is false.
   - **Syntax**:
 
-```
-<span class="hljs-keyword">if</span> (condition) {
-    <span class="hljs-comment">// code to be executed if condition is true</span>
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// code to be executed if condition is false</span>
+```c
+if (condition) {
+    // code to be executed if condition is true
+} else {
+    // code to be executed if condition is false
 }
 ```
   - **Example**:
 
-```
-<span class="hljs-keyword">if</span> (x > <span class="hljs-number">0</span>) {
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"x is positive"</span>;
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-built_in">cout</span> << <span class="hljs-string">"x is non-positive"</span>;
+```c
+if (x > 0) {
+    cout << "x is positive";
+} else {
+    cout << "x is non-positive";
 }
 ```
 3. **The `if-else if` Statement**
   - **Description**: The `if-else if` statement is used to test multiple conditions sequentially. The code block associated with the first condition that evaluates to true is executed, and the rest of the conditions are ignored. If none of the conditions are true, the `else` block (if present) is executed.
   - **Syntax of `if-else if` Statement**
 
-```
-  <span class="hljs-keyword">if</span> (condition1) {
-  <span class="hljs-comment">// Code to execute if condition1 is true</span>
-  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition2) {
-  <span class="hljs-comment">// Code to execute if condition2 is true</span>
-  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition3) {
-  <span class="hljs-comment">// Code to execute if condition3 is true</span>
-  } <span class="hljs-keyword">else</span> {
-  <span class="hljs-comment">// Code to execute if none of the above conditions are true</span>
+```c
+  if (condition1) {
+  // Code to execute if condition1 is true
+  } else if (condition2) {
+  // Code to execute if condition2 is true
+  } else if (condition3) {
+  // Code to execute if condition3 is true
+  } else {
+  // Code to execute if none of the above conditions are true
   }
 ```
   - **Example of `if-else if` Statement** : Let's consider an example to determine a student's grade based on their score:
 
-```
-<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string"><iostream></span></span>
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-<span class="hljs-keyword">int</span> score;
-<span class="hljs-built_in">cout</span> << <span class="hljs-string">"Enter the student's score: "</span>;
-<span class="hljs-built_in">cin</span> >> score;
+```c
+#include <iostream>
+using namespace std;
+int main() {
+int score;
+cout << "Enter the student's score: ";
+cin >> score;
 
- <span class="hljs-keyword">if</span> (score >= <span class="hljs-number">90</span>) {
-<span class="hljs-built_in">cout</span> << <span class="hljs-string">"Grade: A"</span> << endl;
- }
- <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score >= <span class="hljs-number">80</span>) {
-<span class="hljs-built_in">cout</span> << <span class="hljs-string">"Grade: B"</span> << endl;
+ if (score >= 90) {
+cout << "Grade: A" << endl;
+ } 
+ else if (score >= 80) {
+cout << "Grade: B" << endl;
 }
-<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score >= <span class="hljs-number">70</span>) {
-<span class="hljs-built_in">cout</span> << <span class="hljs-string">"Grade: C"</span> << endl;
+else if (score >= 70) {
+cout << "Grade: C" << endl;
+} 
+else if (score >= 60) {
+cout << "Grade: D" << endl;
 }
-<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score >= <span class="hljs-number">60</span>) {
-<span class="hljs-built_in">cout</span> << <span class="hljs-string">"Grade: D"</span> << endl;
+else {
+cout << "Grade: F" << endl;
 }
-<span class="hljs-keyword">else</span> {
-<span class="hljs-built_in">cout</span> << <span class="hljs-string">"Grade: F"</span> << endl;
-}
-<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+return 0;
 }
 ```
 
@@ -91,7 +90,6 @@
 - If the score is between 70 and 79, "Grade: C" is output.
 - If the score is between 60 and 69, "Grade: D" is output.
 - If the score is below 60, "Grade: F" is output.
-
 ```
 4. **Conditional Operator (`?:`)**:
   - **Description**: A shorthand for `if-else`. It evaluates a condition and returns one of two values.
@@ -102,49 +100,49 @@ condition ? value_if_true : value_if_false;
 ```
   - **Example**:
 
-```
-<span class="hljs-keyword">int</span> max = (a > b) ? a : b;
+```c
+int max = (a > b) ? a : b;
 ```
 5. **`switch` Statement**:
   - **Description**: Allows a variable to be tested for equality against a list of values (cases). When a match is found, the corresponding block of code is executed.
   - **Syntax**:
 
-```
-<span class="hljs-keyword">switch</span> (expression) {
-    <span class="hljs-keyword">case</span> value1:
-        <span class="hljs-comment">// code to be executed if expression == value1</span>
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">case</span> value2:
-        <span class="hljs-comment">// code to be executed if expression == value2</span>
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">default</span>:
-        <span class="hljs-comment">// code to be executed if no case matches</span>
+```c
+switch (expression) {
+    case value1:
+        // code to be executed if expression == value1
+        break;
+    case value2:
+        // code to be executed if expression == value2
+        break;
+    default:
+        // code to be executed if no case matches
 }
 ```
   - **Example**:
 
-```
-<span class="hljs-keyword">switch</span> (day) {
-    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Monday"</span>;
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Tuesday"</span>;
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">default</span>:
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Invalid day"</span>;
+```c
+switch (day) {
+    case 1:
+        cout << "Monday";
+        break;
+    case 2:
+        cout << "Tuesday";
+        break;
+    default:
+        cout << "Invalid day";
 }
 ```
 6. **Nested Decision Statements**:
   - **Description**: Using one `if` or `switch` statement inside another `if`, `else if`, or `switch` statement.
   - **Example**:
 
-```
-<span class="hljs-keyword">if</span> (x > <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">if</span> (y > <span class="hljs-number">0</span>) {
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"x and y are positive"</span>;
-    } <span class="hljs-keyword">else</span> {
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"x is positive, but y is not"</span>;
+```c
+if (x > 0) {
+    if (y > 0) {
+        cout << "x and y are positive";
+    } else {
+        cout << "x is positive, but y is not";
     }
 }
 ```
@@ -155,33 +153,33 @@ condition ? value_if_true : value_if_false;
   - **Description**: Repeats a block of code a specific number of times.
   - **Syntax**:
 
-```
-<span class="hljs-keyword">for</span> (initialization; condition; update) {
-    <span class="hljs-comment">// code to be executed</span>
+```c
+for (initialization; condition; update) {
+    // code to be executed
 }
 ```
   - **Example**:
 
-```
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-number">5</span>; i++) {
-    <span class="hljs-built_in">cout</span> << i << <span class="hljs-string">" "</span>;
+```c
+for (int i = 0; i < 5; i++) {
+    cout << i << " ";
 }
 ```
 2. **`while` Loop**:
   - **Description**: Repeats a block of code as long as the condition is true.
   - **Syntax**:
 
-```
-<span class="hljs-keyword">while</span> (condition) {
-    <span class="hljs-comment">// code to be executed</span>
+```c
+while (condition) {
+    // code to be executed
 }
 ```
   - **Example**:
 
-```
-<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
-<span class="hljs-keyword">while</span> (i < <span class="hljs-number">5</span>) {
-    <span class="hljs-built_in">cout</span> << i << <span class="hljs-string">" "</span>;
+```c
+int i = 0;
+while (i < 5) {
+    cout << i << " ";
     i++;
 }
 ```
@@ -189,28 +187,28 @@ condition ? value_if_true : value_if_false;
   - **Description**: Similar to the `while` loop, but the block of code is executed at least once before the condition is tested.
   - **Syntax**:
 
-```
-<span class="hljs-keyword">do</span> {
-    <span class="hljs-comment">// code to be executed</span>
-} <span class="hljs-keyword">while</span> (condition);
+```c
+do {
+    // code to be executed
+} while (condition);
 ```
   - **Example**:
 
-```
-<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
-<span class="hljs-keyword">do</span> {
-    <span class="hljs-built_in">cout</span> << i << <span class="hljs-string">" "</span>;
+```c
+int i = 0;
+do {
+    cout << i << " ";
     i++;
-} <span class="hljs-keyword">while</span> (i < <span class="hljs-number">5</span>);
+} while (i < 5);
 ```
 4. **Nested Loops**:
   - **Description**: A loop inside another loop. Each time the outer loop runs, the inner loop runs its entire cycle.
   - **Example**:
 
-```
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-number">3</span>; i++) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j < <span class="hljs-number">3</span>; j++) {
-        <span class="hljs-built_in">cout</span> << i << <span class="hljs-string">", "</span> << j << <span class="hljs-string">" "</span>;
+```c
+for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+        cout << i << ", " << j << " ";
     }
 }
 ```
@@ -221,34 +219,34 @@ condition ? value_if_true : value_if_false;
   - **Description**: Exits the loop or switch statement immediately.
   - **Example**:
 
-```
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-number">5</span>; i++) {
-    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">3</span>) <span class="hljs-keyword">break</span>;
-    <span class="hljs-built_in">cout</span> << i << <span class="hljs-string">" "</span>;
+```c
+for (int i = 0; i < 5; i++) {
+    if (i == 3) break;
+    cout << i << " ";
 }
-<span class="hljs-comment">// Output: 0 1 2</span>
+// Output: 0 1 2
 ```
 2. **`continue`**:
   - **Description**: Skips the current iteration of the loop and proceeds to the next iteration.
   - **Example**:
 
-```
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-number">5</span>; i++) {
-    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">3</span>) <span class="hljs-keyword">continue</span>;
-    <span class="hljs-built_in">cout</span> << i << <span class="hljs-string">" "</span>;
+```c
+for (int i = 0; i < 5; i++) {
+    if (i == 3) continue;
+    cout << i << " ";
 }
-<span class="hljs-comment">// Output: 0 1 2 4</span>
+// Output: 0 1 2 4
 ```
 3. **`goto` Keyword**:
   - **Description**: Transfers control to a labeled statement elsewhere in the program. Generally discouraged as it can make code harder to read and maintain.
   - **Example**:
 
-```
-<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+```c
+int i = 0;
 start:
-<span class="hljs-built_in">cout</span> << i << <span class="hljs-string">" "</span>;
+cout << i << " ";
 i++;
-<span class="hljs-keyword">if</span> (i < <span class="hljs-number">5</span>) <span class="hljs-keyword">goto</span> start;
+if (i < 5) goto start;
 ```
 
 ### **Multiple-Selection Keywords**
@@ -259,27 +257,27 @@ i++;
   - **Description**: Represents a specific value in a `switch` statement that, if matched, will execute the associated code block.
   - **Example**:
 
-```
-<span class="hljs-keyword">switch</span> (choice) {
-    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Choice is 1"</span>;
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Choice is 2"</span>;
-        <span class="hljs-keyword">break</span>;
+```c
+switch (choice) {
+    case 1:
+        cout << "Choice is 1";
+        break;
+    case 2:
+        cout << "Choice is 2";
+        break;
 }
 ```
 3. **`default`**:
   - **Description**: A fallback case in a `switch` statement, executed if no other `case` matches.
   - **Example**:
 
-```
-<span class="hljs-keyword">switch</span> (choice) {
-    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Choice is 1"</span>;
-        <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">default</span>:
-        <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Invalid choice"</span>;
+```c
+switch (choice) {
+    case 1:
+        cout << "Choice is 1";
+        break;
+    default:
+        cout << "Invalid choice";
 }
 ```
 
