@@ -359,8 +359,8 @@ Pointers are like a friend who remembers the locker number of an item rather tha
 To create a pointer, use `*`:
 
 ```
-<span class="hljs-keyword">int</span> num = <span class="hljs-number">10</span>;
-<span class="hljs-keyword">int</span> *ptr = &num;  <span class="hljs-comment">// 'ptr' holds the address of 'num'</span>
+int num = 10;
+int *ptr = &num;  // 'ptr' holds the address of 'num'
 ```
 
 Here, `ptr` points to the address where `num` is stored in memory.<br>
@@ -370,16 +370,16 @@ Here, `ptr` is like a friend who remembers the "locker number" where `number` is
 **Example:**
 
 ```
- <span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string"><iostream></span></span>
- <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
- <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
- <span class="hljs-keyword">int</span> var = <span class="hljs-number">42</span>;  <span class="hljs-comment">// Regular variable</span>
- <span class="hljs-keyword">int</span>* ptr = &var;  <span class="hljs-comment">// Pointer declaration and initialization</span>
- <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Value of var: "</span> << var << endl;
- <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Address of var: "</span> << &var << endl;
- <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Value of ptr (address of var): "</span> << ptr << endl;
- <span class="hljs-built_in">cout</span> << <span class="hljs-string">"Value pointed to by ptr: "</span> << *ptr << endl;  <span class="hljs-comment">// Dereferencing</span>
- <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+#include <iostream>
+ using namespace std;
+ int main() {
+ int var = 42;  // Regular variable
+ int* ptr = &var;  // Pointer declaration and initialization
+ cout << "Value of var: " << var << endl;
+ cout << "Address of var: " << &var << endl;
+ cout << "Value of ptr (address of var): " << ptr << endl;
+ cout << "Value pointed to by ptr: " << *ptr << endl;  // Dereferencing
+ return 0;
  }
 ```
 
@@ -388,11 +388,11 @@ Here, `ptr` is like a friend who remembers the "locker number" where `number` is
 * **Dereferencing**: `*ptr` allows you to access the actual value at the address. You can access or update the value in the locker by using the pointer:
 
 ```
-<span class="hljs-built_in">cout</span> << *ptr;  <span class="hljs-comment">// This gives the value stored at the address stored in 'ptr'</span>
+cout << *ptr;  // This gives the value stored at the address stored in 'ptr'
 ```
 
 ```
-<span class="hljs-built_in">cout</span> << *ptr;  <span class="hljs-comment">// Outputs 10, the value of 'num'</span>
+cout << *ptr;  // Outputs 10, the value of 'num'
 ```
 
 Pointers are useful because they let you manage data memory efficiently, especially when passing data to functions or working with large data sets.
