@@ -9,7 +9,7 @@
 9. Write a program to input a positive integer N and calculate the sum of even and odd numbers from 1 to N using a loop.
 10. Write a program to check if a given number is an Armstrong number using a loop.
  _________________
- Here are the C++ programs for each of the specified tasks:
+
 
 ---
 
