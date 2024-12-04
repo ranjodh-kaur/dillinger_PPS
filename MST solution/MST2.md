@@ -155,9 +155,10 @@ int main() {
 ### Q6: Employee Management System (Struct and Functions Implementation)  
 
 **Code**:  
+Here is the simplified employee management system without using vectors. Instead, we use a static array to store employee records:
+
 ```cpp
 #include <iostream>
-#include <vector>
 #include <string>
 using namespace std;
 
@@ -168,9 +169,16 @@ struct Employee {
     double salary;
 };
 
-vector<Employee> employees;
+const int MAX_EMPLOYEES = 100;
+Employee employees[MAX_EMPLOYEES];
+int employeeCount = 0;
 
 void addEmployee() {
+    if (employeeCount >= MAX_EMPLOYEES) {
+        cout << "Employee directory is full!" << endl;
+        return;
+    }
+
     Employee e;
     cout << "Enter Name: ";
     cin >> e.name;
@@ -180,35 +188,48 @@ void addEmployee() {
     cin >> e.department;
     cout << "Enter Salary: ";
     cin >> e.salary;
-    employees.push_back(e);
+    employees[employeeCount++] = e;
+
     cout << "Employee added successfully!" << endl;
 }
 
 void displayEmployees() {
-    if (employees.empty()) {
+    if (employeeCount == 0) {
         cout << "No employees to display." << endl;
         return;
     }
-    for (const auto& e : employees) {
-        cout << "ID: " << e.id << ", Name: " << e.name << ", Department: " << e.department << ", Salary: " << e.salary << endl;
+    for (int i = 0; i < employeeCount; i++) {
+        cout << "ID: " << employees[i].id 
+             << ", Name: " << employees[i].name 
+             << ", Department: " << employees[i].department 
+             << ", Salary: " << employees[i].salary << endl;
     }
 }
 
-void searchEmployee(int id) {
-    for (const auto& e : employees) {
-        if (e.id == id) {
-            cout << "Found: ID: " << e.id << ", Name: " << e.name << ", Department: " << e.department << ", Salary: " << e.salary << endl;
+void searchEmployee() {
+    int id;
+    cout << "Enter Employee ID to search: ";
+    cin >> id;
+    for (int i = 0; i < employeeCount; i++) {
+        if (employees[i].id == id) {
+            cout << "Found: ID: " << employees[i].id 
+                 << ", Name: " << employees[i].name 
+                 << ", Department: " << employees[i].department 
+                 << ", Salary: " << employees[i].salary << endl;
             return;
         }
     }
     cout << "Employee not found." << endl;
 }
 
-void updateEmployeeSalary(int id) {
-    for (auto& e : employees) {
-        if (e.id == id) {
+void updateEmployeeSalary() {
+    int id;
+    cout << "Enter Employee ID to update salary: ";
+    cin >> id;
+    for (int i = 0; i < employeeCount; i++) {
+        if (employees[i].id == id) {
             cout << "Enter new salary: ";
-            cin >> e.salary;
+            cin >> employees[i].salary;
             cout << "Salary updated successfully!" << endl;
             return;
         }
@@ -216,10 +237,16 @@ void updateEmployeeSalary(int id) {
     cout << "Employee not found." << endl;
 }
 
-void deleteEmployee(int id) {
-    for (auto it = employees.begin(); it != employees.end(); ++it) {
-        if (it->id == id) {
-            employees.erase(it);
+void deleteEmployee() {
+    int id;
+    cout << "Enter Employee ID to delete: ";
+    cin >> id;
+    for (int i = 0; i < employeeCount; i++) {
+        if (employees[i].id == id) {
+            for (int j = i; j < employeeCount - 1; j++) {
+                employees[j] = employees[j + 1]; // Shift elements left
+            }
+            employeeCount--;
             cout << "Employee deleted successfully!" << endl;
             return;
         }
@@ -228,31 +255,21 @@ void deleteEmployee(int id) {
 }
 
 int main() {
-    int choice, id;
+    int choice;
     while (true) {
-        cout << "\n1. Add Employee\n2. Display Employees\n3. Search Employee\n4. Update Employee Salary\n5. Delete Employee\n6. Exit\nEnter your choice: ";
+        cout << "\n1. Add Employee\n2. Display Employees\n3. Search Employee\n4. Update Employee Salary\n5. Delete Employee\n6. Exit\n";
+        cout << "Enter your choice: ";
         cin >> choice;
         switch (choice) {
             case 1: addEmployee(); break;
             case 2: displayEmployees(); break;
-            case 3: 
-                cout << "Enter ID to search: ";
-                cin >> id;
-                searchEmployee(id); 
-                break;
-            case 4: 
-                cout << "Enter ID to update salary: ";
-                cin >> id;
-                updateEmployeeSalary(id); 
-                break;
-            case 5: 
-                cout << "Enter ID to delete: ";
-                cin >> id;
-                deleteEmployee(id); 
-                break;
+            case 3: searchEmployee(); break;
+            case 4: updateEmployeeSalary(); break;
+            case 5: deleteEmployee(); break;
             case 6: return 0;
-            default: cout << "Invalid choice!" << endl;
+            default: cout << "Invalid choice! Try again." << endl;
         }
     }
 }
 ```
+
