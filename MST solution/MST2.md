@@ -11,24 +11,31 @@
 >QS With the help of code snippet, justify how structures are different from unions.
 >
 >Q6 You are the HR manager of a company, and you are using employee management system to manage the employee data. The system allows you to add new employees, display all employees, search for an employee by ID, update employee salary, and delete an employee. Your task is to
->
->Create a struct employee with
+
+```
+Create a struct employee with
+
 Attributes:
+
 Name: String
 ID: Integer
 Department:
 String
 Salary: Double
+
 Also, in the program add the Functions:
 addEmployee (): Adds the employee to the directory
 displayEmployees (): Displays all the employees present in directory
 searchEmployee (): Search for the employee with Emp ID
 update Employee Salary (): Updates the salary of employee with Emp ID
 delete Employee:): Deletes the employee from the directory with Emp ID
-For every addition of new employee, print a message as "Employee added successfully!"
-If there are no employees left in the directory, print "No employees to display"
-If Employee not found print "Employee not found"
 
+For every addition of new employee, print a message as "Employee added successfully!"
+
+If there are no employees left in the directory, print "No employees to display"
+
+If Employee not found print "Employee not found"
+```
 
 ____
 ### Q1: Is it possible to declare more than one array in the same declaration statement? Justify your answer.  
