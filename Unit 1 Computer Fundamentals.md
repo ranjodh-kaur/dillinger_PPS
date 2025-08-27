@@ -29,7 +29,9 @@
 
 A typical **block diagram of a computer system** shows the interaction between major components:<br>
 
-![computer](https://www.btechcreations.com/wp-content/uploads/2020/02/BLOCK-DIAGRAM-OF-COMPUTER.jpg)<br>
+![computer](https://github.com/ranjodh-kaur/dillinger_PPS/blob/main/block-diagram-of-computer.png?raw=true)
+
+
 
 In the above diagram, both control **(control unit or CU)** and **arithmetic & logic unit (ALU)** combined called as Central Processing Unit (CPU).
 
