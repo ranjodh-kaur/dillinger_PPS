@@ -141,17 +141,13 @@ The **Operating System** is system software that manages computer hardware and s
 | **Linker** | Combines object files into a single executable, resolving references. |
 | **Loader** | Loads an executable into memory and prepares it for execution. |
 
+______________________________________________________________________
 
 #### Compilation Steps in C/C++ (Behind the program execution)
+______________________________________________________________________
+
 
 ![Compilation steps](https://github.com/ranjodh-kaur/dillinger_PPS/blob/main/copilation%20steps.png)
-
-There are four phases for a C program to become an executable: 
-
-- Pre-processing
-- Compilation
-- Assembly
-- Linking
 
 We have a C++ Program file with an extension of .cpp i.e. hello.cpp/ hello.c file.
 
