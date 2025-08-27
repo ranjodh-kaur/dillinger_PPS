@@ -48,11 +48,13 @@ Let's describe all the parts as included within the above diagram one by one.
 **Input Devices:** Examples: Keyboard, Mouse, Scanner, Microphone.<br>
 
 **Output Devices:** Examples: Monitor, Printer, Speakers.
+
 5. **Memory Unit:** The memory unit is an important component of a computer . it's where all data intermediate and finds results are stored.<br>
 
 The data read from the most storage or an input unit are transferred to the computer's memory where they're available for processing.<br>
 
 This memory unit is employed to carry the instructions to be executed and data to be processed.
+
 6. **Disk Storage Unit:** Data and instruction enter into a computing system through data input device need to stored inside the pc before actual processing start. Two sorts of storage units are the first and auxiliary storage units.<br>
 
 i. **Primary Storage Unit:** Primary memory features a direct link with the input unit and output unit. It stores the input file , calculation result.<br>
