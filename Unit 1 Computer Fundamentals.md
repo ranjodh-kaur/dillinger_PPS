@@ -140,3 +140,74 @@ The **Operating System** is system software that manages computer hardware and s
 | **Assembler** | Converts assembly language into machine code. |
 | **Linker** | Combines object files into a single executable, resolving references. |
 | **Loader** | Loads an executable into memory and prepares it for execution. |
+
+
+#### Compilation Steps in C/C++ (Behind the program execution)
+
+There are four phases for a C program to become an executable: 
+
+- Pre-processing
+- Compilation
+- Assembly
+- Linking
+
+We have a C++ Program file with an extension of .cpp i.e. hello.cpp/ hello.c file.
+
+- Step 1 is preprocessing of header files, all the statements starting with # (hash symbol) and comments are replaced/removed during the pre-processing with the help of a pre-processor. It generates an intermediate file with .i file extension i.e. a hello.i file.
+
+- Step 2 is a compilation of hello.i file. Compiler software translates the hello.i file to hello.s with assembly level instructions (low-level code).
+
+- Step 3, assembly-level code instructions are converted into machine-understandable code (binary/hexadecimal form) by the assembler. The file generated is known as the object file with an extension of .obj/.o i.e. hello.obj/hello.o file.
+
+- Step 4, Linker is used to link the library files with the object file to define the unknown statements. It generates an executable file with .exe/.out extension i.e. a hello.exe/ hello.out file.
+
+Next, we can run the hello.exe/hello.out executable file with the help of a loader to get the desired output on our output window, i.e., Hello World!.
+
+1. Pre-processing
+
+This is the first phase through which source code is passed. This phase includes:
+ - Removal of Comments
+ - Expansion of Macros  (#define): Replaces macro names with their values. 
+ - Expansion of the included files (#include): Copies the content of included files. 
+ - Conditional compilation (#ifdef, #ifndef): Controls which parts of the code should be included.
+
+The pre-processed output is stored in the filename.i. 
+
+Example Code (Before Preprocessing)
+
+```c++
+#include <iostream>
+#define PI 3.14  // Macro definition
+
+
+int main() {
+   std::cout << "The value of PI is: " << PI << std::endl;
+   return 0;
+}
+```
+
+After Preprocessing (Expanded Code)
+```
+// Content of <iostream> is inserted here
+int main() {
+   std::cout << "The value of PI is: " << 3.14 << std::endl;
+   return 0;
+}
+```
+
+2. Compiling
+
+The next step is to compile filename.i and produce an; intermediate compiled output file filename.s. This file is in assembly-level instructions. 
+
+3. Assembling
+
+In this phase the filename.s is taken as input and turned into filename.o by the assembler. This file contains machine-level instructions. At this phase, only existing code is converted into machine language, and the function calls like printf() are not resolved.
+
+4. Linking
+
+This is the final phase in which all the linking of function calls with their definitions is done. Linker knows where all these functions are implemented. Linker does some extra work also: it adds some extra code to our program which is required when the program starts and ends. 
+
+
+
+
+
