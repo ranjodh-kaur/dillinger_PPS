@@ -144,6 +144,8 @@ The **Operating System** is system software that manages computer hardware and s
 
 #### Compilation Steps in C/C++ (Behind the program execution)
 
+![Compilation steps](https://github.com/ranjodh-kaur/dillinger_PPS/blob/main/copilation%20steps.png)
+
 There are four phases for a C program to become an executable: 
 
 - Pre-processing
