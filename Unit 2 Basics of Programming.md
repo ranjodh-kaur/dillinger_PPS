@@ -404,6 +404,12 @@ Commonly occurred syntax errors are:
     }
     ```
 
+    ```c++
+    int a=2, b=3;
+    cout<<a+b;  // Wrong logic if we wanted multiplication
+    ```
+
+
 **3. Runtime Error**: Errors which occur during program execution(run-time) after successful compilation are called run-time errors. These errors are very difficult to find, as the compiler does not point to these errors.
 
 * **Definition**: Errors that occur during the execution of the program, such as dividing by zero or accessing invalid memory.
