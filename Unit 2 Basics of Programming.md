@@ -165,6 +165,12 @@ The program will be executed and the output will be shown in the terminal.
   - Whitespace Characters: Space ( ), tab (\t), newline (\n)
   - Escape Sequences: Special characters starting with a backslash, like \n (newline), \t (tab), \ (backslash), ' (single quote), " (double quote)
 
+**Example:**
+
+```
+int num = 10;   // uses letters, digits, whitespace, and symbols (;, =)
+```
+
 **2. Tokens**
 
 * **Definition**: The smallest units in a C++ program.
@@ -181,19 +187,38 @@ The program will be executed and the output will be shown in the terminal.
 * **Syntax**:
 
 ```c
-int a = 5;
+int age = 20;   // age is variable of type int
 ```
 
-**4. Constants**
+**4. Literals**
 
-* **Definition**: Variables whose values cannot be changed during program execution.
+* **Defination**: Literals are the actual values assigned to variables/constants.
+
+Types:
+
+- Integer literal → 10, -25
+- Floating-point literal → 3.14, 2.5e3
+- Character literal → 'A', 'z'
+- String literal → "Hello"
+- Boolean literal → true, false
+
+**Example:**
+
+```c
+int x = 100;        // 100 is an integer literal
+char grade = 'A';   // 'A' is a character literal
+```
+
+**5. Constants**
+
+* **Definition**: Constants are variables whose values cannot be changed once assigned.
 * **Syntax**:
 
 ```c
-const int PI = 3;
+const float PI = 3.14159;   // PI will always remain 3.14159
 ```
 
-**5. Data Types**:
+**6. Data Types**:
 
 * **Definition**: Specify the type of data a variable can hold.
 * C++ supports the following data types:
