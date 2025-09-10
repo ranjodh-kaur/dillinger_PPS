@@ -207,6 +207,10 @@ Types:
 ```c
 int x = 100;        // 100 is an integer literal
 char grade = 'A';   // 'A' is a character literal
+Float d= 3.14;  //  3.14 is a float literal
+Char l [10] = “Hello”;  //  “Hello” is a string literal
+bool a=0;  //  0 is a boolean literal
+bool c=True // True is a boolean literal
 ```
 
 **5. Constants**
