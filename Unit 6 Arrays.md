@@ -358,7 +358,7 @@ Pointers are like a friend who remembers the locker number of an item rather tha
 
 To create a pointer, use `*`:
 
-```
+```cpp
 int num = 10;
 int *ptr = &num;  // 'ptr' holds the address of 'num'
 ```
@@ -369,7 +369,7 @@ Here, `ptr` is like a friend who remembers the "locker number" where `number` is
 
 **Example:**
 
-```
+```cpp
 #include <iostream>
  using namespace std;
  int main() {
@@ -398,3 +398,130 @@ cout << *ptr;  // Outputs 10, the value of 'num'
 Pointers are useful because they let you manage data memory efficiently, especially when passing data to functions or working with large data sets.
 
 ***
+
+
+#### Programs:
+
+**Subtraction of Two Matrices**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rows, cols;
+
+    // Input number of rows and columns
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    cout << "Enter number of columns: ";
+    cin >> cols;
+
+    int A[10][10], B[10][10], C[10][10];
+
+    // Input elements for Matrix A
+    cout << "Enter elements of Matrix A:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "A[" << i << "][" << j << "]: ";
+            cin >> A[i][j];
+        }
+    }
+
+    // Input elements for Matrix B
+    cout << "Enter elements of Matrix B:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "B[" << i << "][" << j << "]: ";
+            cin >> B[i][j];
+        }
+    }
+
+    // Subtract matrices A and B -> store in C
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            C[i][j] = A[i][j] - B[i][j];
+        }
+    }
+
+    // Display the result
+    cout << "\nResultant Matrix (A - B):\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+```
+
+**Output:**
+```
+Resultant Matrix (A - B):
+-3 -1
+1 3
+```
+
+**Addition of Two Matrices**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rows, cols;
+
+    // Input number of rows and columns
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    cout << "Enter number of columns: ";
+    cin >> cols;
+
+    int A[10][10], B[10][10], C[10][10];
+
+    // Input elements for Matrix A
+    cout << "Enter elements of Matrix A:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "A[" << i << "][" << j << "]: ";
+            cin >> A[i][j];
+        }
+    }
+
+    // Input elements for Matrix B
+    cout << "Enter elements of Matrix B:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "B[" << i << "][" << j << "]: ";
+            cin >> B[i][j];
+        }
+    }
+
+    // Add matrices A and B -> store in C
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+
+    // Display the result
+    cout << "\nResultant Matrix (A + B):\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+**Output:**
+
+```
+Resultant Matrix (A + B):
+6 8
+10 12
+```
