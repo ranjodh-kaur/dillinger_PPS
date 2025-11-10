@@ -592,7 +592,7 @@ int main() {
 }
 ```
 
-**Output: **
+**Output:**
 
 ```cpp
 Resultant Matrix (A × B):
