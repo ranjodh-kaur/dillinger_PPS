@@ -525,3 +525,77 @@ Resultant Matrix (A + B):
 6 8
 10 12
 ```
+
+**Multiplication of Two Matrices**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int r1, c1, r2, c2;
+
+    // Input dimensions of the first matrix
+    cout << "Enter rows and columns of first matrix: ";
+    cin >> r1 >> c1;
+
+    // Input dimensions of the second matrix
+    cout << "Enter rows and columns of second matrix: ";
+    cin >> r2 >> c2;
+
+    // Check if matrix multiplication is possible
+    if (c1 != r2) {
+        cout << "Matrix multiplication not possible! (Columns of A must equal rows of B)";
+        return 0;
+    }
+
+    int A[10][10], B[10][10], C[10][10] = {0};
+
+    // Input elements for Matrix A
+    cout << "Enter elements of Matrix A:\n";
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c1; j++) {
+            cout << "A[" << i << "][" << j << "]: ";
+            cin >> A[i][j];
+        }
+    }
+
+    // Input elements for Matrix B
+    cout << "Enter elements of Matrix B:\n";
+    for (int i = 0; i < r2; i++) {
+        for (int j = 0; j < c2; j++) {
+            cout << "B[" << i << "][" << j << "]: ";
+            cin >> B[i][j];
+        }
+    }
+
+    // Multiply matrices A and B -> store in C
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            C[i][j] = 0;
+            for (int k = 0; k < c1; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    // Display the result
+    cout << "\nResultant Matrix (A × B):\n";
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+**Output: **
+
+```cpp
+Resultant Matrix (A × B):
+58 64
+139 154
+```
